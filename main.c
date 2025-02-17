@@ -67,7 +67,7 @@ int main() {
     printf("\nСписок активных процессов:\n");
     system("ps aux | head -n 2");
     printf("\nИнформация о сетевых интерфейсах:\n");
-    system("ip addr show | grep 'inet ' | head -n 1");
+    system("ip addr show | grep 'inet ' | head -n 5");
 
     return 0;
 }
