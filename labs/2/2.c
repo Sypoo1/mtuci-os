@@ -5,12 +5,12 @@
 #include <sys/wait.h>
 
 // Функция для вывода информации о процессе
-void print_info(const char *processName) {
+void print_info(const char *Name) {
     char timeStr[9]; // Формат "HH:MM:SS"
     time_t now = time(NULL);
     strftime(timeStr, sizeof(timeStr), "%H:%M:%S", localtime(&now));
     printf("%s: PID = %d, PPID = %d, Время = %s\n",
-           processName, getpid(), getppid(), timeStr);
+        Name, getpid(), getppid(), timeStr);
 }
 
 int main(void) {
